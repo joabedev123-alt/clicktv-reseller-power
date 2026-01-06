@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MessageCircle, Mail } from "lucide-react";
+import { Youtube, MessageCircle, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,18 +36,13 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
-                aria-label="Instagram"
+                href="https://youtube.com/@clicktv-rh3pm?si=o70_7zpglvA1BZgi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center hover:border-red-600 hover:bg-red-600/10 hover:text-red-600 transition-colors duration-200"
+                aria-label="YouTube"
               >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-200"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>
