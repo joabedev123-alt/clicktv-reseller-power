@@ -9,12 +9,14 @@ import ServersSection from "@/components/ServersSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MoviesSection from "@/components/MoviesSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <HeroSection />
+      <MoviesSection />
       <QualitySection />
       <EducationalSection />
       <ChannelsSection />
