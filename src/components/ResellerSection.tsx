@@ -1,6 +1,6 @@
 const ResellerSection = () => {
   return (
-    <section id="revenda" className="py-20 md:py-28 bg-card">
+    <section id="revenda" className="py-12 md:py-28 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4">

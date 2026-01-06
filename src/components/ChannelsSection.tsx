@@ -20,10 +20,10 @@ const ChannelsSection = () => {
   ];
 
   return (
-    <section id="planos" className="py-20 md:py-28 relative overflow-hidden">
+    <section id="planos" className="py-12 md:py-28 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">

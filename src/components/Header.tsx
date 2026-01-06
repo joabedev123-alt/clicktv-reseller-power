@@ -1,9 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hide navbar when scrolled down (> 50px), show when at the top
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { label: "Planos IPTV", href: "#planos" },
@@ -17,14 +32,17 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border transition-transform duration-300 ${isScrolled ? "-translate-y-full" : "translate-y-0"
+        }`}
+    >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-28">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <span className="text-2xl md:text-3xl font-extrabold">
-              <span className="text-foreground">Click</span>
-              <span className="text-gradient-orange"> TV</span>
+            <img src="/logo.png" alt="Click TV Logo" className="h-16 md:h-24 w-auto" />
+            <span className="text-2xl md:text-3xl font-extrabold sr-only">
+              Click TV
             </span>
           </a>
 

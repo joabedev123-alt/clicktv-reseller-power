@@ -15,7 +15,7 @@ const ServersSection = () => {
   ];
 
   return (
-    <section id="testar" className="py-20 md:py-28 relative overflow-hidden">
+    <section id="testar" className="py-12 md:py-28 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-card via-background to-card" />
 
